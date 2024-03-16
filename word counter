@@ -13,7 +13,7 @@ public class WordCounterApp extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        // Create components
+       
         JPanel inputPanel = new JPanel();
         inputPanel.setLayout(new FlowLayout());
         JLabel inputLabel = new JLabel("Enter a paragraph:");
@@ -26,7 +26,7 @@ public class WordCounterApp extends JFrame {
 
         resultLabel = new JLabel("Word count will be displayed here.");
 
-        // Add components to the frame
+       
         add(inputPanel, BorderLayout.NORTH);
         add(resultLabel, BorderLayout.CENTER);
     }
@@ -34,13 +34,13 @@ public class WordCounterApp extends JFrame {
     private class CountButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            // Get text from the text field
+          
             String inputText = textField.getText();
-            // Split text into words using space as delimiter
+           
             String[] words = inputText.split("\\s+");
             // Count the number of words
             int wordCount = words.length;
-            // Update the result label
+         
             resultLabel.setText("Number of words: " + wordCount);
         }
     }
@@ -55,4 +55,3 @@ public class WordCounterApp extends JFrame {
         });
     }
 }
-
